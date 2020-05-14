@@ -12,10 +12,18 @@ public class Prob03 {
 
 		// 수정된 배열 원소 출력
 		printCharArray(c);
+		
+		//System.out.println(c.length);
 	}
 	
 	public static void replaceSpace( char[] c ) {
 		/* 코드를 완성합니다 */
+		
+		for(int i = 0; i <c.length; i++) {
+			if(c[i]==' ') {
+				c[i]=',';
+			}
+		}
 	}
 	
 	public static void printCharArray( char[] c ) {

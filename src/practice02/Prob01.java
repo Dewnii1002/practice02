@@ -10,25 +10,21 @@ public class Prob01 {
 		Scanner scanner = new Scanner(System.in);
 		String moneys = scanner.nextLine();
 
-		int length = moneys.length();
-
 		int money = Integer.parseInt(moneys);
-		int[] temp = new int[length];
-		int[] change = new int[length];
-		
+		int[] temp = new int[10];
+		int[] change = new int[11];
+
 		change[0] = money;
 
-		for (int i = 0; i < length; i++) {
-			if (change[i] / MONEYS[i] >= 1) {
-				temp[i] = change[i] / MONEYS[i];
-				change[i+1] = change[i] - MONEYS[i]*temp[i];
-				System.out.println(temp[i]);
-			}
+		for (int i = 0; i < 10; i++) {
 
+			temp[i] = change[i] / MONEYS[i];
+			change[i + 1] = change[i] - MONEYS[i] * temp[i];
+			System.out.println(MONEYS[i] + "원: " + temp[i]);
 		}
 		scanner.close();
 	}
 
-	/* 코드를 완성합니다 */
+	/* 肄붾뱶瑜� �셿�꽦�빀�땲�떎 */
 
 }
